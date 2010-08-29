@@ -19,7 +19,6 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/emms/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/plugins"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp"))
-(add-to-list 'load-path (expand-file-name "/vhome/manver01/temp/jd-el"))
 
 ;;Personal customization
 (require 'mpv-c)
