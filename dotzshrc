@@ -15,7 +15,7 @@ setopt   longlistjobs                        # list jobs in long format
 # Set up history
 HISTSIZE=1000                                # size of history
 SAVEHIST=1000
-HISTFILE=~/.history
+HISTFILE=~/.history                          # history file
 setopt  APPEND_HISTORY                       # history is appended by shells
 setopt  SHARE_HISTORY                        # history is shared by shells
 setopt  HIST_IGNORE_DUPS                     # ignore duplicates
