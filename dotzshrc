@@ -1,0 +1,23 @@
+# Set options
+unsetopt nomatch                             # don't generate no-match error
+unsetopt badpattern			     # don't generate bad-pattern error
+unsetopt bgnice 			     # don't lower priority of background jobs
+setopt   notify	       		             # notify background job completion immediately
+setopt   autocd                              # move to a directory, is used as a command
+setopt   correct                             # autocorect commands
+setopt   correctall                          # autocorrect all arguments
+setopt   autolist                            # automatically list choices on tab completion
+setopt   recexact                            # recognise ambigious exact matches
+setopt   longlistjobs                        # list jobs in long format
+
+
+
+# Set up history
+HISTSIZE=1000                                # size of history
+SAVEHIST=1000
+HISTFILE=~/.history                          # history file
+setopt  APPEND_HISTORY                       # history is appended by shells
+setopt  SHARE_HISTORY                        # history is shared by shells
+setopt  HIST_IGNORE_DUPS                     # ignore duplicates
+setopt  HIST_REDUCE_BLANKS                   # remove whitespaces
+setopt  histverify                           # verify the history command before running.
