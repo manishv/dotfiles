@@ -2,7 +2,7 @@
 ;; (hbar. HEIGHT); see the docs for set-cursor-type
 
 (setq mpv-read-only-color       "gray")
-(setq mpv-read-only-cursor-type 'hbar)
+(setq mpv-read-only-cursor-type 'box)
 (setq mpv-overwrite-color       "red")
 (setq mpv-overwrite-cursor-type 'bar)
 (setq mpv-normal-color          "black")
@@ -20,8 +20,9 @@
       (set-cursor-color mpv-overwrite-color)
       (setq cursor-type mpv-overwrite-cursor-type))
     (t 
-      (set-cursor-color mpv-normal-color)
-      (setq cursor-type mpv-normal-cursor-type))
+      ;; (set-cursor-color mpv-normal-color)
+     (setq cursor-type mpv-normal-cursor-type)
+      )
     ))
 
 (add-hook 'post-command-hook 'set-cursor-according-to-mode)
