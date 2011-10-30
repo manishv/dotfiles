@@ -14,6 +14,7 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp-personal"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp-arm-personal"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/color-theme-6.6.0"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/color-theme-6.6.0/themes"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/emms/lisp"))
@@ -26,21 +27,22 @@
     (require 'mpv-org))
 (require 'mpv-epa)
 (require 'mpv-ido)
-(require 'mpv-php)
+;;(require 'mpv-php)
+(require 'mpv-python)
 ;;(require 'yasnippet-bundle)
 ;;load the svn plugin
-(require 'psvn)
-(require 'mpv-project)
+;;(require 'psvn)
+;;(require 'mpv-project)
 
 ;;load color-theme
 (require 'color-theme)
 ;; (require 'zenburn)
 ;;(color-theme-zenburn)
 (color-theme-initialize)
-;;(color-theme-wombat)
 (if window-system 
     (color-theme-gtk-ide)
-    (color-theme-arjen))
+    (color-theme-wombat))
+;;    (color-theme-arjen))
 ;;    (color-theme-dark-laptop))
 
 ;;load ascope - Another cscope plugin
@@ -57,11 +59,14 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(display-time-mode t)
+ '(font-use-system-font t)
+ '(scroll-bar-mode nil)
  '(show-paren-mode t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#ffffff" :foreground "#000000" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 96 :width normal :foundry "unknown" :family "DejaVu LGC Sans Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "white" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "Monaco"))))
  '(which-func ((default nil) (nil (:inherit nil)))))
