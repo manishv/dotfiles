@@ -2,7 +2,7 @@
 (require 'epa)
 
 (set-variable (quote epg-gpg-program) 
-	      (quote "c:/Program Files/GNU/GnuPG/gpg") nil)
+	      (quote "gpg") nil)
 
 (epa-file-enable)
 
