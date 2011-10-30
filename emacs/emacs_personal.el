@@ -16,7 +16,10 @@
   (scroll-bar-mode (quote right)))
 
 ;; Line-wrapping
-(set-default 'fill-column 90)
+(set-default 'fill-column 80)
+
+;; Display time mode
+(display-time-mode 1)
 
 ;; Base text mode
 (setq default-major-mode 'text-mode)
@@ -62,6 +65,11 @@
 ;; Keep bookmarks in the load path
 (setq bookmark-default-file "~/.emacs.d/emacs-bookmarks")
 
+;; Keep track of last cursor position
+(require 'saveplace)
+(setq save-place-file "~/.emacs.d/saveplace")
+(setq-default save-place t)
+
 ;; Split the frame horizontally
 (setq ediff-split-window-function 'split-window-vertically)
 
@@ -93,5 +101,6 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
-(setq org-agenda-files (list "~/work/tasks/office-tasks.org"
-			     "~/work/tasks/personal-tasks.org"))
+;; (setq org-agenda-files (list "~/work/tasks/office-tasks.org"
+;; 			     "~/work/tasks/personal-tasks.org"))
+
