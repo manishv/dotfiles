@@ -71,3 +71,9 @@
   'sw-mouse-copy-region-to-clipboard)
 
 (define-key term-raw-map [mouse-3] 'sw-mouse-paste-clipboard)
+
+(set-default 'ansi-term-color-vector
+	     [unspecified "black" "red1" "green1" "yellow1" "SkyBlue2"
+			  "magenta1" "cyan3" 'term-default-bg-color])
+
+(provide 'mpv-ansiterm)
