@@ -50,6 +50,7 @@
 (require 'mpv-elscreen)
 (require 'mpv-cursor)
 (require 'mpv-unique)
+(require 'mpv-ansiterm)
 
 ;;Load the personal
 (load-file "~/.emacs.d/emacs_personal.el")
