@@ -14,4 +14,5 @@
   )
 
 (add-hook 'python-mode-hook 'my-python-mode-hook)
+(local-set-key "\C-c\C-c" 'comment-region)
 (provide 'mpv-python)
