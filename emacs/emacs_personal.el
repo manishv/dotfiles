@@ -83,6 +83,8 @@
 (global-set-key "\C-cg" 'ascope-find-global-definition)
 (global-set-key "\C-cs" 'ascope-find-this-symbol)
 (global-set-key "\C-cf" 'ascope-find-functions-calling-this-function)
+(global-set-key "\C-x9" 'delete-other-windows-vertically)
+ 
 (if window-system
     (global-set-key "\C-@"  'align-regexp))
 (global-set-key (quote [C-space]) 'set-mark-command)
@@ -90,17 +92,11 @@
 (windmove-default-keybindings)
 ;; (global-set-key "\C-S-W"  'copy-to-register)
 ;; (global-set-key "\C-S-Y"  'insert-register)
+(global-set-key "\C-h" 'delete-backward-char)
 
 (load-library "sh-script")
 (define-key sh-mode-map "\C-c\C-c" 'comment-region)
 
 ;; Use ANSI colors within shell-mode
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
-;; (setq org-agenda-files (list "~/work/tasks/office-tasks.org"
-;; 			     "~/work/tasks/personal-tasks.org"))
 

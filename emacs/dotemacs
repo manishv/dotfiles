@@ -17,7 +17,6 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp-arm-personal"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/color-theme-6.6.0"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/color-theme-6.6.0/themes"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/emms/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/plugins"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp"))
 
@@ -35,10 +34,7 @@
 ;;(require 'mpv-project)
 
 ;;load color-theme
-(require 'color-theme)
-;; (require 'zenburn)
-;;(color-theme-zenburn)
-(color-theme-initialize)
+(require 'mpv-color-themes)
 (if window-system 
     (color-theme-gtk-ide)
     (color-theme-wombat))
