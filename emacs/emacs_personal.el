@@ -100,3 +100,6 @@
 ;; Use ANSI colors within shell-mode
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
+;; Aliases of common used emacs functions
+(defalias 'rb 'revert-buffer)
+(defalias 'dtw 'delete-trailing-whitespace)
