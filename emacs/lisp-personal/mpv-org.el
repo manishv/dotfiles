@@ -8,7 +8,6 @@
 ;; (add-hook 'remember-mode-hook 'org-remember-apply-template)
 ;; (define-key global-map [(control meta ?r)] 'remember)
 
-
 (setq org-deadline-warning-days 14)
 (setq org-agenda-show-all-dates t)
 (setq org-agenda-skip-deadline-if-done t)
@@ -20,8 +19,12 @@
 
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
-(local-unset-key (quote [S-down]))
-(local-unset-key (quote [S-up]))
+;; Make windmove work in org-mode:
+(setq org-replace-disputed-keys t)
+(setq org-disputed-keys (quote (([(shift up)] . [(control c)(up)])  ([(shift down)] . [(control c)(down)]))))
+(add-hook 'org-shiftup-final-hook 'windmove-up)
+(add-hook 'org-shiftdown-final-hook 'windmove-down)
+
 (setq org-log-done t)
 (setq org-agenda-files (list "~/work/tasks/office-tasks.org"
 			     "~/work/tasks/personal-tasks.org"))
