@@ -2,6 +2,7 @@
 (load-library "fill-column-indicator")
 
 
+;; Customizations for python programming
 (defun todo-highlight ()
   (font-lock-add-keywords nil
 			  '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t))))
@@ -17,5 +18,5 @@
 )
 
 (add-hook 'python-mode-hook 'my-python-mode-common-hook)
-
+(local-set-key "\C-c\C-c" 'comment-region)
 (provide 'mpv-python)
