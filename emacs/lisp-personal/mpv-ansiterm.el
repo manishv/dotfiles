@@ -4,7 +4,7 @@
 
 (defvar sw-open-in-new-frame nil)
 (defvar sw-remove-dead-terms t)
-
+(setq term-buffer-maximum-size 0)
 
 (defun sw-shell-get-process (buffer-name)
   (let ((buffer (get-buffer (concat "*" buffer-name "*"))))
@@ -71,3 +71,5 @@
   'sw-mouse-copy-region-to-clipboard)
 
 (define-key term-raw-map [mouse-3] 'sw-mouse-paste-clipboard)
+
+(provide 'mpv-ansiterm)
