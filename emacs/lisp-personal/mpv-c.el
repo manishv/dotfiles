@@ -7,6 +7,7 @@
 
 (load-library "hideshow")
 (load-library "autopair")
+(load-library "fill-column-indicator")
 
 (defun my-c-mode-common-hook ()
   ;; set my personal style for the current buffer
@@ -18,13 +19,12 @@
   (todo-highlight)  ;;highlights the above keywords
   (hs-minor-mode)   ;;hides/shows C-code segments
   (which-function-mode t) ;; displays the name of the current function in the mode bar
-  ;; we like auto-newline, but not hungry-delete
-  ;; (c-toggle-auto-newline 1)
   ;;use linum mode
   (if (> emacs-major-version 22)
     (linum-mode t))
   (setq show-trailing-whitespace t)
   (autopair-mode)
+  (fci-mode)
 )
 
 (global-set-key "\C-c'" 'hs-hide-block)

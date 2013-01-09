@@ -4,7 +4,7 @@
 
 (defvar sw-open-in-new-frame nil)
 (defvar sw-remove-dead-terms t)
-
+(setq term-buffer-maximum-size 0)
 
 (defun sw-shell-get-process (buffer-name)
   (let ((buffer (get-buffer (concat "*" buffer-name "*"))))
@@ -71,9 +71,5 @@
   'sw-mouse-copy-region-to-clipboard)
 
 (define-key term-raw-map [mouse-3] 'sw-mouse-paste-clipboard)
-
-(set-default 'ansi-term-color-vector
-	     [unspecified "black" "red1" "green1" "yellow1" "SkyBlue2"
-			  "magenta1" "cyan3" 'term-default-bg-color])
 
 (provide 'mpv-ansiterm)

@@ -10,10 +10,11 @@
   
 ;; Toogle tool bar mode
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 
-;; Scroll bar on the right
-(if (> emacs-major-version 22)
-  (scroll-bar-mode (quote right)))
+;; ;; Scroll bar on the right
+;; (if (> emacs-major-version 22)
+;;   (scroll-bar-mode (quote right)))
 
 ;; Line-wrapping
 (set-default 'fill-column 80)
@@ -103,3 +104,10 @@
 ;; Aliases of common used emacs functions
 (defalias 'rb 'revert-buffer)
 (defalias 'dtw 'delete-trailing-whitespace)
+
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+;; (setq org-agenda-files (list "~/Documents/Dropbox/MobileOrg/personal_tasks.org" 
+;; 			     "/data/work/GTD/monthly_tasks.org"))
