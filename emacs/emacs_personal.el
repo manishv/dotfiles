@@ -1,3 +1,5 @@
+(defvar macosx-p (string-match "darwin" (symbol-name system-type)))
+
 ;; "y or n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
 ;;Stops accidental killing of emacs
@@ -11,6 +13,10 @@
 ;; Toogle tool bar mode
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+
+(if window-system
+    (tool-bar-mode -1)
+  (menu-bar-mode -1))
 
 ;; ;; Scroll bar on the right
 ;; (if (> emacs-major-version 22)
@@ -36,8 +42,8 @@
   read-file-name-completion-ignore-case t)
 
 ;; ;; Default font
-;; (if (> emacs-major-version 22)
-;;     (set-default-font "Bitstream Vera Sans Mono-10"))
+(if macosx-p
+     (set-default-font "Monaco-10") )
 
 ;; No splash screen
 (setq inhibit-splash-screen t)

@@ -1,4 +1,4 @@
-;; (defvar my-font 
+; (defvar my-font 
 ;;   "-*-lucidatypewriter-medium-*-*-sans-12-*-*-*-*-*-*-*" 
 ;;   "Default Normal Font"
 ;; )
@@ -25,7 +25,7 @@
 (require 'mpv-c)
 (if (> emacs-major-version 22)
     (require 'mpv-org))
-(require 'mpv-epa)
+;; (require 'mpv-epa)
 (require 'mpv-ido)
 ;;(require 'mpv-php)
 (require 'mpv-python)
@@ -34,10 +34,10 @@
 ;;(require 'psvn)
 ;;(require 'mpv-project)
 
-;;load color-theme
+;;load color-themes
 (require 'mpv-color-themes)
 (if window-system 
-    (color-theme-gtk-ide)
+    (color-theme-tangotango)
     (color-theme-tangotango))
 ;;    (color-theme-arjen))
 ;;    (color-theme-dark-laptop))
@@ -52,21 +52,21 @@
 ;;Load the personal
 (load-file "~/.emacs.d/emacs_personal.el")
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(display-time-mode t)
  '(font-use-system-font t)
  '(scroll-bar-mode nil)
- '(show-paren-mode t))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "white" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "Monaco"))))
  '(org-scheduled-previously ((((class color) (min-colors 88) (background light)) (:foreground "RoyalBlue"))))
  '(org-sexp-date ((((class color) (background light)) (:foreground "RoyalBlue"))))
  '(org-upcoming-deadline ((((class color) (min-colors 88) (background light)) (:foreground "blue"))))
