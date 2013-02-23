@@ -1,3 +1,4 @@
+;; -*- emacs-lisp -*-
 ; (defvar my-font 
 ;;   "-*-lucidatypewriter-medium-*-*-sans-12-*-*-*-*-*-*-*" 
 ;;   "Default Normal Font"
