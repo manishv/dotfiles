@@ -105,6 +105,12 @@
 (defalias 'rb 'revert-buffer)
 (defalias 'dtw 'delete-trailing-whitespace)
 
+;; Load os specific customization
+(if (eq system-type 'gnu/linux)
+    (require 'mpv-linux))
+(if (eq system-type 'darwin)
+    (require 'mpv-macos))
+
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
