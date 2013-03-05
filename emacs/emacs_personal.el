@@ -13,6 +13,8 @@
 ;; Toogle tool bar mode
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+;; Minimal left fringe and no right fringe.
+(fringe-mode '(1 . 0))
 
 (if window-system
     (tool-bar-mode -1)
