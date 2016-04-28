@@ -25,8 +25,9 @@
 (add-hook 'org-shiftup-final-hook 'windmove-up)
 (add-hook 'org-shiftdown-final-hook 'windmove-down)
 
+(defvar LOCAL_HOME "/vhome/manver01")
 (setq org-log-done t)
-(setq org-agenda-files (list "~/work/tasks/office-tasks.org"
-			     "~/work/tasks/personal-tasks.org"))
+(setq org-agenda-files (list (concat LOCAL_HOME "/work/tasks/office-tasks.org")
+			     (concat LOCAL_HOME "/work/tasks/personal-tasks.org")))
 
 (provide 'mpv-org)

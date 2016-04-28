@@ -14,4 +14,4 @@
 
 (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
 
-(provid 'mpv-magit)
+(provide 'mpv-magit)

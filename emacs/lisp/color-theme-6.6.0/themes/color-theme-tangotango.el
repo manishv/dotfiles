@@ -4,7 +4,7 @@
   (interactive)
   (color-theme-install
    '(color-theme-tango
-     ((background-color . "#242424")
+     ((background-color . "#2E3436")
       (background-mode . dark)
       (border-color . "#888a85")
       (cursor-color . "#656565")
@@ -122,10 +122,10 @@
      (message-header-to ((t (:foreground "white"))))
      (message-header-cc ((t (:foreground "white"))))
      (org-hide ((t (:foreground "#2e3436"))))
-     (org-level-1 ((t (:bold t :foreground "dodger blue" :height 1.0))))
-     (org-level-2 ((t (:bold t :foreground "#6ac214" :height 1.0))))
-     (org-level-3 ((t (:bold t :foreground "#edd400" :height 1.0))))
-     (org-level-4 ((t (:bold t :foreground "tomato" :height 1.0))))
+     (org-level-1 ((t ( :foreground "dodger blue" :height 1.0))))
+     (org-level-2 ((t ( :foreground "#6ac214" :height 1.0))))
+     (org-level-3 ((t ( :foreground "#edd400" :height 1.0))))
+     (org-level-4 ((t ( :foreground "tomato" :height 1.0))))
      (org-date ((t (:underline t :foreground "magenta3"))))
      (org-footnote  ((t (:underline t :foreground "magenta3"))))
      (org-link ((t (:foreground "skyblue2" :background "#2e3436"))))

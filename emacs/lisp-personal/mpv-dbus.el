@@ -15,6 +15,8 @@
      '(:array :signature "{sv}")
      ':int32 timeout))
 
-(defun pw/compile-notify ()
+(defun compile-notify ()
   (interactive)
   (send-desktop-notification "emacs compile" "message" 0))
+
+(provide 'mpv-dbus)
